@@ -1,6 +1,11 @@
+const wpNuxtFeed = require("wp-nuxt/lib/rss")
+
 export default {
   srcDir: "src",
-  modules: ["nuxt-stack"],
+  modules: [
+    "wp-nuxt",
+    "nuxt-stack"
+  ],
   styles: ["styles/index.scss"],
   styleResources: {
     scss: ["styles/theme.scss"]
@@ -24,5 +29,13 @@ export default {
         "Roboto Mono:400"
       ]
     }
+  },
+  feed: [
+    wpNuxtFeed({
+      endpoint: "https://wp.kmr.io/wp-json"
+    })
+  ],
+  wp: {
+    endpoint: "https://wp.kmr.io/wp-json"
   }
 }
