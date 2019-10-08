@@ -23,10 +23,14 @@ export default {
     ]
   },
   webfonts: {
-    google: {
+    custom: {
       families: [
         "Quicksand:500",
         "Roboto Mono:400"
+      ],
+      urls: [
+        'https://cdn.jsdelivr.net/npm/typeface-quicksand@0.0.71/index.min.css',
+        'https://cdn.jsdelivr.net/npm/roboto-mono-webfont@2.0.986/roboto-mono.min.css'
       ]
     }
   },
