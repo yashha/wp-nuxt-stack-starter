@@ -1,0 +1,37 @@
+html {
+  color: $black;
+  background: $smoke;
+  font-family: $mono-font-fallback;
+  font-size: 16px;
+  line-height: 1.5;
+  &.wf-active {
+    font-family: $mono-font-family;
+  }
+}
+
+h1 {
+  font-family: $heading-font-fallback;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+  .wf-active & {
+    font-family: $heading-font-family;
+  }
+}
+
+.tabbing :focus {
+  outline: 3px dashed $green-3;
+  outline-offset: 6px;
+}
+
+.green-1 {
+  color: $green-1;
+}
+
+.green-2 {
+  color: $green-2;
+}
+
+.green-3 {
+  color: $green-3;
+}

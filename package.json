@@ -1,0 +1,47 @@
+{
+  "name": "wp-nuxt-stack-starter",
+  "version": "1.0.0",
+  "description": "Wordpress + Nuxt + Nuxt Stack -- Starter",
+  "main": "index.js",
+  "author": "yashha <yasarkkk@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nuxt": "^2.10.0",
+    "nuxt-stack": "^0.7.2"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "clean": "nuxt clean",
+    "serve": "nuxt serve",
+    "start": "nuxt start",
+    "stats": "nuxt stats",
+    "build": "nuxt build --modern=server",
+    "generate": "nuxt generate --modern=client",
+    "format": "nuxt format --write --lint '*.{md}' 'src/**/*.{js,json,scss,vue}'",
+    "lint": "nuxt lint . --fix",
+    "test": "nuxt test",
+    "commit": "commit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "nuxt format --write --lint",
+      "nuxt lint --fix",
+      "nuxt test --related",
+      "git add"
+    ],
+    "src/**/*.{html,json,scss}": [
+      "nuxt format --write",
+      "git add"
+    ],
+    "*.{md}": [
+      "nuxt format --write",
+      "git add"
+    ]
+  }
+}
