@@ -8,7 +8,7 @@
   "dependencies": {
     "nuxt": "^2.10.0",
     "nuxt-stack": "^0.7.2",
-    "wp-nuxt": "^1.0.20"
+    "wp-nuxt": "^1.0.21"
   },
   "scripts": {
     "dev": "nuxt",
